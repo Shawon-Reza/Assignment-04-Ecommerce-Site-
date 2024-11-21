@@ -1,0 +1,200 @@
+[
+  {
+    "product_id": 1,
+    "product_title": "Dell XPS 13",
+    "product_image": "https://i.ibb.co.com/JQ3ffNm/pexels-photo.webp",
+    "category": "Laptop",
+    "price": 1299.99,
+    "description": "Ultra-thin, powerful laptop with a stunning 13-inch display.",
+    "specification": ["Intel i7", "16GB RAM", "512GB SSD", "13.3-inch FHD"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 2,
+    "product_title": "MacBook Air M2",
+    "product_image": "https://i.ibb.co.com/JQ3ffNm/pexels-photo.webp",
+    "category": "Laptop",
+    "price": 1199.99,
+    "description": "Lightweight laptop with Apple’s M2 chip for superior performance.",
+    "specification": ["M2 Chip", "8GB RAM", "256GB SSD", "Retina Display"],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": 3,
+    "product_title": "iPhone 15 Pro",
+    "product_image": "https://i.ibb.co.com/jgm4vV4/Cicmxn4-R9v-AV8-Fj-Yvj-Df-LF-320-80.jpg",
+    "category": "Phone",
+    "price": 999.99,
+    "description": "The latest iPhone with incredible camera features and titanium body.",
+    "specification": ["A17 Bionic", "128GB", "48MP Camera", "5G"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": 4,
+    "product_title": "Samsung Galaxy S23 Ultra",
+    "product_image": "https://i.ibb.co.com/jgm4vV4/Cicmxn4-R9v-AV8-Fj-Yvj-Df-LF-320-80.jpg",
+    "category": "Phone",
+    "price": 1199.99,
+    "description": "Premium Android phone with cutting-edge features and display.",
+    "specification": ["Snapdragon 8 Gen 2", "256GB", "200MP Camera", "6.8-inch AMOLED"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 5,
+    "product_title": "Apple Watch Series 9",
+    "product_image": "https://i.ibb.co.com/1bWyM9y/Noise-Fit-Halo-AMOLED-Display-Smart-Watch.jpg",
+    "category": "Smartwatch",
+    "price": 399.99,
+    "description": "Advanced smartwatch with health tracking and always-on display.",
+    "specification": ["S9 Processor", "Waterproof", "Sleep Tracking", "Blood Oxygen Monitor"],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 6,
+    "product_title": "Apple 6 pro",
+    "product_image": "https://i.ibb.co.com/1bWyM9y/Noise-Fit-Halo-AMOLED-Display-Smart-Watch.jpg",
+    "category": "Smartwatch",
+    "price": 299.99,
+    "description": "Smartwatch with a sleek design and advanced fitness features.",
+    "specification": ["Exynos W930", "1.5GB RAM", "LTE Support", "Heart Rate Monitor"],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": 7,
+    "product_title": "Sony WH-1000XM5",
+    "product_image": "https://i.ibb.co.com/gmVf0PZ/Xiaomi-Type-C-Earphones-5.png",
+    "category": "Accessory",
+    "price": 349.99,
+    "description": "Noise-canceling headphones with immersive sound.",
+    "specification": ["Bluetooth 5.2", "30-hour Battery", "Quick Charging"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": 8,
+    "product_title": "Logitech MX Master 3S",
+    "product_image": "https://i.ibb.co.com/gmVf0PZ/Xiaomi-Type-C-Earphones-5.png",
+    "category": "Accessory",
+    "price": 99.99,
+    "description": "Premium ergonomic mouse designed for productivity.",
+    "specification": ["4000 DPI Sensor", "USB-C", "Bluetooth Support"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 9,
+    "product_title": "Asus ROG Zephyrus G14",
+    "product_image": "https://i.ibb.co.com/JQ3ffNm/pexels-photo.webp",
+    "category": "Laptop",
+    "price": 1499.99,
+    "description": "Gaming laptop with a powerful GPU and ultra-slim design.",
+    "specification": ["Ryzen 9", "RTX 4060", "16GB RAM", "1TB SSD"],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": 10,
+    "product_title": "Google Pixel 8",
+    "product_image": "https://i.ibb.co.com/jgm4vV4/Cicmxn4-R9v-AV8-Fj-Yvj-Df-LF-320-80.jpg",
+    "category": "Phone",
+    "price": 699.99,
+    "description": "Flagship phone with AI-driven features and stunning camera.",
+    "specification": ["Tensor G3", "128GB", "50MP Camera", "120Hz AMOLED"],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 11,
+    "product_title": "Fitbit Versa 4",
+    "product_image": "https://i.ibb.co.com/1bWyM9y/Noise-Fit-Halo-AMOLED-Display-Smart-Watch.jpg",
+    "category": "Smartwatch",
+    "price": 199.99,
+    "description": "Fitness-focused smartwatch with great battery life.",
+    "specification": ["Heart Rate Monitor", "Sleep Analysis", "Waterproof"],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product_id": 12,
+    "product_title": "Anker PowerCore 20,000mAh",
+    "product_image": "https://i.ibb.co.com/gmVf0PZ/Xiaomi-Type-C-Earphones-5.png",
+    "category": "Accessory",
+    "price": 49.99,
+    "description": "High-capacity power bank for on-the-go charging.",
+    "specification": ["USB-C", "Quick Charge 3.0", "Dual Output"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 13,
+    "product_title": "Microsoft Surface Laptop 5",
+    "product_image": "https://i.ibb.co.com/JQ3ffNm/pexels-photo.webp",
+    "category": "Laptop",
+    "price": 1299.99,
+    "description": "Sleek laptop for productivity and multitasking.",
+    "specification": ["Intel i5", "8GB RAM", "256GB SSD", "13.5-inch Touchscreen"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": 14,
+    "product_title": "Sony PlayStation Pulse 3D",
+    "product_image": "https://i.ibb.co.com/gmVf0PZ/Xiaomi-Type-C-Earphones-5.png",
+    "category": "Accessory",
+    "price": 99.99,
+    "description": "3D wireless headset designed for immersive gaming.",
+    "specification": ["3D Audio", "Dual Mics", "USB-C Charging"],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 15,
+    "product_title": "OnePlus 12",
+    "product_image": "https://i.ibb.co.com/jgm4vV4/Cicmxn4-R9v-AV8-Fj-Yvj-Df-LF-320-80.jpg",
+    "category": "Phone",
+    "price": 799.99,
+    "description": "Powerful phone with blazing-fast charging and smooth performance.",
+    "specification": ["Snapdragon 8 Gen 3", "256GB", "50MP Triple Camera"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 16,
+    "product_title": "Garmin Fenix 7X",
+    "product_image": "https://i.ibb.co.com/1bWyM9y/Noise-Fit-Halo-AMOLED-Display-Smart-Watch.jpg",
+    "category": "Smartwatch",
+    "price": 699.99,
+    "description": "Outdoor GPS smartwatch with advanced tracking features.",
+    "specification": ["GPS", "Solar Charging", "Rugged Design"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": 17,
+    "product_title": "HP Spectre x360",
+    "product_image": "https://i.ibb.co.com/JQ3ffNm/pexels-photo.webp",
+    "category": "Laptop",
+    "price": 1399.99,
+    "description": "Convertible laptop with a stunning 4K display.",
+    "specification": ["Intel i7", "16GB RAM", "1TB SSD", "13.5-inch 4K OLED"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 18,
+    "product_title": "Bose QuietComfort Earbuds 2",
+    "product_image": "https://i.ibb.co.com/gmVf0PZ/Xiaomi-Type-C-Earphones-5.png",
+    "category": "Accessory",
+    "price": 249.99,
+    "description": "Premium noise-canceling earbuds with excellent sound quality.",
+    "specification": ["Active Noise Cancelling", "8-hour Battery", "IPX4 Water-Resistant"],
+    "availability": true,
+    "rating": 4.9
+  }
+]

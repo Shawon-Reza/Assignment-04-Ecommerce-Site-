@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+// import '../public/fackData.json'
 import './index.css'
 
 import {
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
     children:[
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        
       },
       {
         path: '/dashboard',
