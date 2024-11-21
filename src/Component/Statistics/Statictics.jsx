@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import NavBar from "../Navbar/NavBar";
 
 const Statictics = () => {
@@ -5,6 +6,7 @@ const Statictics = () => {
         <div>
             <NavBar></NavBar>
             <h1>Statictics</h1>
+            <Footer></Footer>
         </div>
     );
 };

@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import NavBar from "../Navbar/NavBar";
 
 const Dashboard = () => {
@@ -5,6 +6,7 @@ const Dashboard = () => {
         <div>
             <NavBar></NavBar>
             <h1>DashBoard</h1>
+            <Footer></Footer>
         </div>
     );
 };
