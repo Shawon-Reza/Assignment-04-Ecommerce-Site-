@@ -11,7 +11,7 @@ import Root from './Component/Root/Root.jsx';
 import Home from './Component/Home/Home.jsx';
 import Dashboard from './Component/Dashboard/Dashboard.jsx';
 import Statictics from './Component/Statistics/Statictics.jsx';
-import Products from './Component/Products/Products.jsx';
+import FetchProducs from './Component/FetchProducts/FetchProducs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,35 +21,11 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        children: [{
-          path: '/',
-          element: <Products></Products>
-        },
-        {
-          path: '/laptops',
-          element: <Products></Products>
-        },
-        {
-          path: '/phones',
-          element: <Products></Products>
-        },
-        {
-          path: '/accessories',
-          element: <Products></Products>
-        },
-        {
-          path: '/smartwatches',
-          element: <Products></Products>
-        },
-        {
-          path:'/macbooks',
-          element: <Products></Products>
-        },
-        {
-          path:'/iphones',
-          element: <Products></Products>
-        }
-        
+        children: [
+          {
+            path: '/:categories',
+            element: <FetchProducs></FetchProducs>
+          }
         ]
 
       },
