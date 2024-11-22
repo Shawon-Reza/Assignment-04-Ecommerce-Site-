@@ -8,7 +8,7 @@ const Root = () => {
     // Fetch All Products 
     const [Allproducs, setAllProducts] = useState([''])
     useEffect(() => {
-        fetch("../../../public/fackData.json")
+        fetch("/fackData.json")
             .then((res) => res.json())
             .then((data) => setAllProducts(data))
             .catch((err) => console.error("Failed to fetch data:", err));
@@ -22,7 +22,7 @@ const Root = () => {
         <div>
             <h1>From Root</h1>
 
-            <AllProducts.Provider value={[Allproducs]}>
+            <AllProducts.Provider value={{Allproducs,setAllProducts}}>
                 <Outlet></Outlet>
             </AllProducts.Provider>
 
