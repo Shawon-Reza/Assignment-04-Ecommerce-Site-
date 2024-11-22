@@ -12,6 +12,7 @@ import Home from './Component/Home/Home.jsx';
 import Dashboard from './Component/Dashboard/Dashboard.jsx';
 import Statictics from './Component/Statistics/Statictics.jsx';
 import FetchProducs from './Component/FetchProducts/FetchProducs.jsx';
+import ProductDetails from './Component/ProductDetails/ProductDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,11 +25,16 @@ const router = createBrowserRouter([
         children: [
           {
             path: '/:categories',
-            element: <FetchProducs></FetchProducs>
+            element: <FetchProducs></FetchProducs>,
+            children: [
+
+            ]
           }
         ]
 
       },
+
+
       {
         path: '/dashboard',
         element: <Dashboard></Dashboard>
@@ -36,7 +42,18 @@ const router = createBrowserRouter([
       {
         path: '/statistics',
         element: <Statictics></Statictics>
+      },
+
+      {
+        path: ':Category/:laptop/:id',
+        element: <ProductDetails></ProductDetails>
+      },
+
+      {
+        path: ':laptop/:id',
+        element: <ProductDetails></ProductDetails>
       }
+
     ]
   },
 ]);

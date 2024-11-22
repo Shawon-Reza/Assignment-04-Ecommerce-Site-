@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 export const AllProducts = createContext();
 
 const Root = () => {
+    const [specificDetails, setspecificDetails] = useState([])
 
     // Fetch All Products 
     const [Allproducs, setAllProducts] = useState([''])
@@ -22,7 +23,9 @@ const Root = () => {
         <div>
             <h1>From Root</h1>
 
-            <AllProducts.Provider value={{Allproducs,setAllProducts}}>
+            <AllProducts.Provider
+                value={{ Allproducs, setAllProducts, specificDetails, setspecificDetails }}>
+
                 <Outlet></Outlet>
             </AllProducts.Provider>
 

@@ -5,4 +5,6 @@ const categoriesValidation = (path, Allproducs) => {
    return categoryData;
 }
 
+
+
 export { categoriesValidation }
