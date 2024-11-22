@@ -1,9 +1,12 @@
-const categoriesValidation = (path, Allproducs) => {
-    const categoryData = Allproducs.filter(product =>(product.category==path ));
 
-   
-   return categoryData;
+const categoriesValidation = (path, Allproducs) => {
+    const categoryData = Allproducs.filter(product => (product.category == path));
+
+
+    return categoryData;
 }
+
+
 
 
 
