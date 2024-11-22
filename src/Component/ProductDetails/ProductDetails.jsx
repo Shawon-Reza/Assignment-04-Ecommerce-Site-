@@ -11,8 +11,7 @@ const ProductDetails = () => {
 
     // Get Specific produc details sent vai NavLink State.
     const loc = useLocation()
-    console.log(loc.state.product
-    )
+    
 
     const { category, price, description, product_image, product_title, rating, specification, product_id, availability } = loc.state.product;
 

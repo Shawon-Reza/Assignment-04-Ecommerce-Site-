@@ -7,7 +7,6 @@ import './Nav.css'
 const NavBar = () => {
 // Navbar Path find
 const path = useLocation()
-console.log(path.pathname);
 //  flex justify-between items-center w-full bg-[#9538E2] py-5 text-white px-12 rounded-t-xl
 
     return (
