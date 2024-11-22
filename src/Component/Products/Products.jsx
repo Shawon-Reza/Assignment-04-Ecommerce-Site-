@@ -14,13 +14,7 @@ const Products = () => {
     }, []);
 
     const rout = useLocation()
-    console.log(rout.pathname);
 
-    if (rout.pathname === "/") {
-        console.log("Fck Reza");
-    } else {
-        console.log("So sad");
-    }
 
     return (
         <div className="">
@@ -38,7 +32,7 @@ const Products = () => {
                     <NavLink to="iphones"><button className="btn border-cyan-500">Iphone</button></NavLink>
                 </div>
 
-{/* if in home page then only show all data  */}
+                {/* if in home page then only show all data  */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {
                         rout.pathname === "/" ? (ProductsData.map(product => <Product

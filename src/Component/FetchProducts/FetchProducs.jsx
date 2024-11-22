@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Product from "../Product/Product";
 import { useLocation } from "react-router-dom";
+import { AllProducts } from "../Root/Root";
 
 const FetchProducs = () => {
     // Load Fack Data
@@ -15,6 +16,9 @@ const FetchProducs = () => {
 
     const rout= useLocation()
 
+
+    const [rootData]= useContext(AllProducts)
+    console.log("From Fetch :",rout.pathname, rootData);
 
     return (
         <div>
