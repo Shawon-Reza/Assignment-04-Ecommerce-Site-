@@ -20,7 +20,14 @@ const ProductDetails = () => {
     return (
         <div>
             <NavBar></NavBar>
-            <div className="mt-40 flex gap-[4%] justify-center shadow-2xl p-5 rounded-lg">
+            {/* Produc Details Banner */}
+            <div className="text-center pb-52 bg-purple-500 text-white space-y-4 relative mb-80">
+                <h4 className="font-bold text-4xl pt-5">Producs Details</h4>
+                <p className="opacity-80">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
+
+            </div>
+            {/* Produc Details */}
+            <div className="mt-40 flex gap-[4%] justify-center shadow-2xl p-5 rounded-lg absolute w-[60%] -bottom-40 md:-bottom-52 left-[19%] border-8  bg-white border-purple-300">
 
                 <img src={product_image} alt="" className="rounded-xl shadow-2xl w-[50%] object-contain max-h-[400px]" />
                 <div className="space-y-2">
@@ -36,7 +43,7 @@ const ProductDetails = () => {
                     <span className="flex items-center gap-2 font-bold">Rating {rating} <FcRating /></span>
 
                     <div className="flex gap-5">
-                        <button>Add TO Card</button>
+                        <button className="btn btn-sm border-cyan-500 bg-purple-700 text-white">Add TO Card</button>
 
                         <p className="cursor-pointer text-red-600 text-2xl">
                             <FaHeart />
@@ -44,6 +51,7 @@ const ProductDetails = () => {
                     </div>
                 </div>
             </div>
+
             <Footer></Footer>
         </div>
     );
