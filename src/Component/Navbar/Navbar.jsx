@@ -18,6 +18,7 @@ const path = useLocation()
 
 
                 <Link  to={'/'} ><h1 className="font-bold">Gadget Heaven</h1></Link>
+                
                 <div className="flex gap-5 font-semibold">
                     <NavLink to={'/'}>Home</NavLink>
                     <NavLink to={"/statistics"}>Statistic</NavLink>

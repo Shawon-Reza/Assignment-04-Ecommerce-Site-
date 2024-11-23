@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { NavLink, Outlet, useLocation, useParams } from "react-router-dom";
 import Product from "../Product/Product";
+import { ImOpt } from "react-icons/im";
+import './products.css'
 
 const Products = () => {
     // Load Fack Data
@@ -23,9 +25,9 @@ const Products = () => {
             <div className="flex mt-10 gap-4">
 
                 <div className="flex flex-col bg-white p-2 border rounded-lg gap-1 items-center">
-                    <NavLink to=""><button className="btn border-cyan-500">All Product</button></NavLink>
+                    <NavLink to="/"><button className="btn border-cyan-500">All Product</button></NavLink>
                     <NavLink to="/laptop"><button className="btn border-cyan-500">Laptops</button></NavLink>
-                    <NavLink to="/phone"><button className="btn border-cyan-500">Phones</button></NavLink>
+                    <NavLink to="phone"><button className="btn border-cyan-500">Phones</button></NavLink>
                     <NavLink to="/accessory"><button className="btn border-cyan-500">Accessories</button></NavLink>
                     <NavLink to="/smartwatch"><button className="btn border-cyan-500">Smart Watch</button></NavLink>
                     <NavLink to="/macbook"><button className="btn border-cyan-500">Macbook</button></NavLink>

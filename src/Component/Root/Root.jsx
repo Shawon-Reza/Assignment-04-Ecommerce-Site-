@@ -4,10 +4,12 @@ import { Outlet } from "react-router-dom";
 export const AllProducts = createContext();
 
 const Root = () => {
+    // Global Data for Contex API
     const [allAddtoCart, setAllAddtoCart] = useState([])
-
-    // Fetch All Products 
+    const [allAddToWishlist,setallAddToWishlist]=useState([])
     const [Allproducs, setAllProducts] = useState([''])
+
+
     useEffect(() => {
         fetch("/fackData.json")
             .then((res) => res.json())
@@ -24,7 +26,7 @@ const Root = () => {
             <h1>From Root</h1>
 
             <AllProducts.Provider
-                value={{ Allproducs, setAllProducts, allAddtoCart, setAllAddtoCart }}>
+                value={{ Allproducs, setAllProducts, allAddtoCart, setAllAddtoCart,allAddToWishlist,setallAddToWishlist }}>
 
                 <Outlet></Outlet>
             </AllProducts.Provider>

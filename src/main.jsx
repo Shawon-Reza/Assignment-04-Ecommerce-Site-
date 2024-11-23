@@ -50,11 +50,15 @@ const router = createBrowserRouter([
         element: <Statictics></Statictics>,
       },
       {
-        path: ":Category/:id",
+        path: ":Category/:laptop/:id",
         element: <ProductDetails></ProductDetails>,
       },
       {
-        path: ":laptop/:id",
+        path: "/:category/:id",
+        element: <ProductDetails></ProductDetails>,
+      },
+      {
+        path: "allproduct/:id",
         element: <ProductDetails></ProductDetails>,
       },
     ],
