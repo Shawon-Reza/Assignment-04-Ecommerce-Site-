@@ -1,6 +1,6 @@
 #Reza
 
-- Live Link :
+- Live Link : https://reza-ecomerce-website-ph-ass-08.netlify.app/
 - List of React Fundamental concepts used in the project : 
      - React Components
      - React Hooks
