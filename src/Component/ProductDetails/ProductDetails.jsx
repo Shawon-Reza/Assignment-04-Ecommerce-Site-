@@ -4,20 +4,64 @@ import NavBar from "../Navbar/NavBar";
 import { FcRating } from "react-icons/fc";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
+import { useContext } from "react";
+import { AllProducts } from "../Root/Root";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ProductDetails = () => {
-
     // Get Specific produc details sent vai NavLink State.
     const loc = useLocation()
-    
 
-    const { category, price, description, product_image, product_title, rating, specification, product_id, availability } = loc.state.product;
+    const { category, price, description, product_image, product_title, rating, specification, product_id, availability } = loc.state.product;  //Data rcv via NavLink State 
+
+    const { allAddToWishlist, setallAddToWishlist } = useContext(AllProducts)
+
+    const addTOWishlist = () => {
+        console.log(loc.state.product);
+        const validation = allAddToWishlist.find(p => p.product_id == loc.state.product.product_id)
+        if (validation) {
+            console.log("Already Exists");
+            toast.warning("Already In WishList!",{
+                position: "top-center"
+            })
+
+        }
+        else {
+            const totalcart = [...allAddToWishlist, loc.state.product]
+            setallAddToWishlist(totalcart)
+        }
+
+
+        
+        console.log("Im from ADd TO Wishlist");
+    }
+    console.log("All Add To Wishlist: ", allAddToWishlist);
+
+
+
+    // Total addTocard Products Details
+    const { allAddtoCart, setAllAddtoCart } = useContext(AllProducts)
+
+    const addTOCart = () => {
+        const totalcart = [...allAddtoCart, loc.state.product]
+        setAllAddtoCart(totalcart)
+        toast.success("Add Product Successfully",{
+            position: "top-center"
+        })
+        console.log("From Add to cart:", loc.state.product);
+        console.log("Im from ADd to Cart");
+
+    }
+    console.log("All Add To cart: ", allAddtoCart);
+
 
 
     return (
         <div>
+            <ToastContainer />
             <NavBar></NavBar>
             {/* Produc Details Banner */}
             <div className="text-center pb-52 bg-purple-500 text-white space-y-4 relative mb-80">
@@ -42,9 +86,17 @@ const ProductDetails = () => {
                     <span className="flex items-center gap-2 font-bold">Rating {rating} <FcRating /></span>
 
                     <div className="flex gap-5">
-                        <button className="btn btn-sm border-cyan-500 bg-purple-700 text-white">Add TO Card</button>
 
-                        <p className="cursor-pointer text-red-600 text-2xl">
+                        <button
+                            className="btn btn-sm border-cyan-500 bg-purple-700 text-white"
+                            onClick={() => {
+                                addTOCart();
+                            }}
+                        >Add TO Card</button>
+
+                        <p className="cursor-pointer text-red-600 text-2xl"
+                            onClick={addTOWishlist}
+                        >
                             <FaHeart />
                         </p>
                     </div>
