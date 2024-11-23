@@ -5,11 +5,12 @@ import NavBar from "../Navbar/NavBar";
 import { AllProducts } from "../Root/Root";
 import { TiDelete } from "react-icons/ti";
 import { Outlet, useLocation } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Dashboard = () => {
     const [totalPrice, setTotalPrice] = useState(0);
-    const { allAddtoCart } = useContext(AllProducts);
+    const { allAddtoCart, setAllAddtoCart } = useContext(AllProducts);
 
     // console.log(allAddtoCart);
 
@@ -23,8 +24,34 @@ const Dashboard = () => {
 
     const loc = useLocation()
 
+    const [count, setcout] = useState(0)
+    const sortByprice = () => {
+        const sorted = [...allAddtoCart].sort((a, b) => b.price - a.price)
+        console.log("Sorted Data :", sorted)
+        setAllAddtoCart(sorted)
+
+        setcout(count + 1)
+        console.log(count);
+        if (count < 1) {
+            toast.info("Sort By price")
+        }
+        else {
+            toast.info("Already Sorted")
+        }
+
+
+    }
+
+    const removeTOCart = (p) => {
+        const removedProduct = allAddtoCart.filter(product => product.product_id != p.product_id)
+        setAllAddtoCart(removedProduct)
+        toast.success("Removed Iteem Successfull", {
+            position: "top-right"
+        })
+    }
     return (
         <div>
+            <ToastContainer />
             <NavBar></NavBar>
             <Dashboardbanner></Dashboardbanner>
             {/* DashBoard Header */}
@@ -38,21 +65,16 @@ const Dashboard = () => {
                             <p className="font-bold text-lg">Cart</p>
                             <div className="flex gap-5 font-bold">
                                 <p>Total Cost: ${totalPrice}</p>
-                                <button className="btn btn-sm text-white bg-purple-600">Sort by Price</button>
+
+                                <button
+                                    className="btn btn-sm text-white bg-purple-600"
+                                    onClick={sortByprice}
+                                >Sort by Price</button>
+
                                 <button className="btn btn-sm text-white bg-purple-600">Purchase</button>
                             </div>
                         </>
                     )}
-
-
-                    {/* <p className="font-bold text-lg">Cart</p>
-                    <div className="flex gap-5 font-bold">
-                        <p>Total Cost: ${totalPrice}</p>
-
-                        <button className="btn btn-sm text-white bg-purple-600">Sort by Price</button>
-                        <button className="btn btn-sm text-white bg-purple-600">Purchase</button>
-
-                    </div> */}
 
                 </div>
             </div>
@@ -71,7 +93,12 @@ const Dashboard = () => {
                                     <p className="font-bold">${p.price}</p>
                                 </div>
                             </div>
-                            <span className="text-4xl p-2 text-red-600 cursor-pointer"> <TiDelete /></span>
+                            <span
+                                className="text-4xl p-2 text-red-600 cursor-pointer"
+                                onClick={() => {
+                                    removeTOCart(p)
+                                }}
+                            > <TiDelete /></span>
                         </div>)
                     ) : (<p></p>)
                 }

@@ -5,7 +5,9 @@ const Statictics = () => {
     return (
         <div>
             <NavBar></NavBar>
-            <h1>Statictics</h1>
+            <div>
+                
+            </div>
             <Footer></Footer>
         </div>
     );

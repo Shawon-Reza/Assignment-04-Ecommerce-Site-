@@ -23,7 +23,6 @@ const Root = () => {
     return (
 
         <div>
-            <h1>From Root</h1>
 
             <AllProducts.Provider
                 value={{ Allproducs, setAllProducts, allAddtoCart, setAllAddtoCart,allAddToWishlist,setallAddToWishlist }}>

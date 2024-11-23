@@ -32,6 +32,7 @@ const ProductDetails = () => {
         else {
             const totalcart = [...allAddToWishlist, loc.state.product]
             setallAddToWishlist(totalcart)
+            toast.success("Add To WishList")
         }
 
 
@@ -70,9 +71,9 @@ const ProductDetails = () => {
 
             </div>
             {/* Produc Details */}
-            <div className="mt-40 flex gap-[4%] justify-center shadow-2xl p-5 rounded-lg absolute w-[60%] -bottom-40 md:-bottom-52 left-[19%] border-8  bg-white border-purple-300">
+            <div className="mt-40 flex gap-[4%] justify-center shadow-2xl p-5 rounded-lg absolute w-[90%] sm:w-[80%] md:w-[60%] top-28 md:-bottom-52 left-[6%] md:left-[20%] border-8  bg-white border-purple-300">
 
-                <img src={product_image} alt="" className="rounded-xl shadow-2xl w-[50%] object-contain max-h-[400px]" />
+                <img src={product_image} alt="" className="rounded-xl shadow-2xl w-[50%] object-contain max-h-[400px] " />
                 <div className="space-y-2">
                     <h1 className="text-4xl font-bold">{product_title}</h1>
                     <p className="font-bold text-3xl">Price : ${price}</p>
