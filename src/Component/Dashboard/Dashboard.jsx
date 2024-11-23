@@ -4,6 +4,8 @@ import Footer from "../Footer/Footer";
 import NavBar from "../Navbar/NavBar";
 import { AllProducts } from "../Root/Root";
 import { TiDelete } from "react-icons/ti";
+import { Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Dashboard = () => {
     const [totalPrice, setTotalPrice] = useState(0);
@@ -29,8 +31,12 @@ const Dashboard = () => {
                     <p className="font-bold text-lg">Cart</p>
                     <div className="flex gap-5 font-bold">
                         <p>Total Cost: ${totalPrice}</p>
-                        <button className="btn btn-sm text-white bg-purple-600">Sort by Price</button>
+                    
+                            <button className="btn btn-sm text-white bg-purple-600">Sort by Price</button>
+                       
+
                         <button className="btn btn-sm text-white bg-purple-600">Purchase</button>
+
                     </div>
                 </div>
             </div>
@@ -52,6 +58,9 @@ const Dashboard = () => {
                         </div>)
                 }
             </div>
+
+
+            <Outlet></Outlet>
             <Footer></Footer>
         </div>
     );

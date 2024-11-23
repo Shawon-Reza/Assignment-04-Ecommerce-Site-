@@ -13,6 +13,8 @@ import Dashboard from './Component/Dashboard/Dashboard.jsx';
 import Statictics from './Component/Statistics/Statictics.jsx';
 import FetchProducs from './Component/FetchProducts/FetchProducs.jsx';
 import ProductDetails from './Component/ProductDetails/ProductDetails.jsx';
+import Cart from './Component/cart/Cart.jsx';
+import Wishlist from './Component/WishList/Wishlist.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,41 +22,42 @@ const router = createBrowserRouter([
     element: <Root></Root>,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home></Home>,
         children: [
           {
-            path: '/:categories',
+            path: ":categories",
             element: <FetchProducs></FetchProducs>,
-            children: [
-
-            ]
-          }
-        ]
-
-      },
-
-
-      {
-        path: '/dashboard',
-        element: <Dashboard></Dashboard>
+          },
+        ],
       },
       {
-        path: '/statistics',
-        element: <Statictics></Statictics>
+        path: "/dashboard", // Parent path
+        element: <Dashboard></Dashboard>,
+        children: [
+          {
+            path: "cart", // Relative path
+            element: <Cart></Cart>,
+          },
+          {
+            path: "wishlist", // Relative path
+            element: <Wishlist></Wishlist>,
+          },
+        ],
       },
-
       {
-        path: ':Category/:laptop/:id',
-        element: <ProductDetails></ProductDetails>
+        path: "/statistics",
+        element: <Statictics></Statictics>,
       },
-
       {
-        path: ':laptop/:id',
-        element: <ProductDetails></ProductDetails>
-      }
-
-    ]
+        path: ":Category/:laptop/:id",
+        element: <ProductDetails></ProductDetails>,
+      },
+      {
+        path: ":laptop/:id",
+        element: <ProductDetails></ProductDetails>,
+      },
+    ],
   },
 ]);
 
