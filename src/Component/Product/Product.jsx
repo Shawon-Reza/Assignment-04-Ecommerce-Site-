@@ -24,7 +24,7 @@ const Product = ({ product }) => {
             <p className="opacity-70 flex-grow">Price: {price}k</p>
 
             <NavLink
-                to={`${category}/${product_id}`}
+                to={`${product_id}`}
                 state={{ product }}
             >
                 <button
