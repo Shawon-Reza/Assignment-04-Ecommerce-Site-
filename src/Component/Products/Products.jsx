@@ -9,7 +9,7 @@ const Products = () => {
     const [ProductsData, setProductsData] = useState([0])
 
     useEffect(() => {
-        fetch("../../../public/fackData.json")
+        fetch("/fackData.json")
             .then((res) => res.json())
             .then((data) => setProductsData(data))
             .catch((err) => console.error("Failed to fetch data:", err));
@@ -45,7 +45,7 @@ const Products = () => {
                     }
                 </div>
 
-                <div>
+                <div className="mx-auto">
                     <Outlet></Outlet>
                 </div>
             </div>

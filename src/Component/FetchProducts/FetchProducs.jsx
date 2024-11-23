@@ -6,17 +6,6 @@ import { categoriesValidation } from "../FetchData/FetchData";
 import NoDataFound from "../NoData/NoDataFound";
 
 const FetchProducs = () => {
-    // Load Fack Data
-    // const [ProductsData, setProductsData] = useState([0])
-
-    // useEffect(() => {
-    //     fetch("../../../public/fackData.json")
-    //         .then((res) => res.json())
-    //         .then((data) => setProductsData(data))
-    //         .catch((err) => console.error("Failed to fetch data:", err));
-    // }, []);
-
-    // Categories Routing Location
     const rout = useLocation()
     const path = rout.pathname.slice(1);
 
@@ -30,7 +19,7 @@ const FetchProducs = () => {
     return (
         <div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
                 {
                     categoryData.length > 0 ? (categoryData.map(product => <Product
                         product={product}
