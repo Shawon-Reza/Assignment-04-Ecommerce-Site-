@@ -6,7 +6,7 @@ export const AllProducts = createContext();
 const Root = () => {
     // Global Data for Contex API
     const [allAddtoCart, setAllAddtoCart] = useState([])
-    const [allAddToWishlist,setallAddToWishlist]=useState([])
+    const [allAddToWishlist, setallAddToWishlist] = useState([])
     const [Allproducs, setAllProducts] = useState([''])
 
 
@@ -24,8 +24,9 @@ const Root = () => {
 
         <div>
 
+            {/* <p>From Root.......................</p> */}
             <AllProducts.Provider
-                value={{ Allproducs, setAllProducts, allAddtoCart, setAllAddtoCart,allAddToWishlist,setallAddToWishlist }}>
+                value={{ Allproducs, setAllProducts, allAddtoCart, setAllAddtoCart, allAddToWishlist, setallAddToWishlist }}>
 
                 <Outlet></Outlet>
             </AllProducts.Provider>

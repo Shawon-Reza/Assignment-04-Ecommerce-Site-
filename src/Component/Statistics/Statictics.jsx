@@ -11,6 +11,7 @@ import {
     Legend,
     ResponsiveContainer,
 } from "recharts";
+import { Helmet } from "react-helmet-async";
 
 const Statictics = () => {
     const [barData, setBarData] = useState([]);
@@ -26,6 +27,9 @@ const Statictics = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Gadget Haven | Statics</title>
+            </Helmet>
             <NavBar />
             <div className="mt-20" style={{ width: "100%", height: 400 }}>
                 {/* ResponsiveContainer ensures the chart is responsive */}

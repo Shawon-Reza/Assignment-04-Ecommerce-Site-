@@ -2,13 +2,13 @@ import { useLocation } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import NavBar from "../Navbar/NavBar";
 import { FcRating } from "react-icons/fc";
-import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 import { useContext } from "react";
 import { AllProducts } from "../Root/Root";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 
 const ProductDetails = () => {
@@ -62,6 +62,9 @@ const ProductDetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Gadget Haven | Details</title>
+            </Helmet>
             <ToastContainer />
             <NavBar></NavBar>
             {/* Produc Details Banner */}

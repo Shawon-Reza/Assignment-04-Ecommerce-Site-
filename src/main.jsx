@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 // import '../public/fackData.json'
 import './index.css'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import {
   createBrowserRouter,
@@ -17,6 +18,7 @@ import Cart from './Component/cart/Cart.jsx';
 import Wishlist from './Component/WishList/Wishlist.jsx';
 import RoutingError from './Component/handleRoutingErrorPage/RoutingError.jsx';
 import Contact from './Component/Contact/Contact.jsx';
+import LogIn from './Component/Login/LogIn.jsx';
 
 const router = createBrowserRouter([
   {
@@ -80,8 +82,12 @@ const router = createBrowserRouter([
         errorElement: <RoutingError></RoutingError>,
       },
       {
-        path:":cart",
+        path: ":cart",
         element: <Dashboard></Dashboard>
+      },
+      {
+        path:'/LogIn',
+        element: <LogIn></LogIn>
       }
     ],
   },
@@ -89,6 +95,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </StrictMode>,
 )

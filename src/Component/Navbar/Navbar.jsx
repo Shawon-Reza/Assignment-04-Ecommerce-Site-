@@ -17,13 +17,16 @@ const NavBar = () => {
                     "flex justify-between items-center w-full bg-white py-5 text-black px-12 rounded-t-xl shadow-2xl "}`}>
 
 
-                <Link to={'/'} ><h1 className="font-bold">Gadget Heaven</h1></Link>
+                <Link to={'/'} ><h1 className="font-bold hidden md:inline">Gadget Heaven</h1></Link>
 
                 <div className="flex gap-5 font-semibold">
                     <NavLink to={'/'}>Home</NavLink>
-                    <NavLink to={"/statistics"}>Statistic</NavLink>
+                    <NavLink to={"/statistics"} className="hidden md:inline">Statistic</NavLink>
                     <NavLink to={'/dashboard'}>Dashboard</NavLink>
                     <NavLink to={'/contact'}>Contact</NavLink>
+                    <NavLink to={'/LogIn'} >
+                        Log In
+                    </NavLink>
                 </div>
                 <div className="flex gap-3">
                     <NavLink>
