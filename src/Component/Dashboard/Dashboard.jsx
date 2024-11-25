@@ -8,6 +8,7 @@ import { TiDelete } from "react-icons/ti";
 import { Outlet, useLocation } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
     const [totalPrice, setTotalPrice] = useState(0);
@@ -61,6 +62,9 @@ const Dashboard = () => {
 
     return (
         <div>
+             <Helmet>
+                <title>Gadget Haven | Dashboard</title>
+            </Helmet>
             <ToastContainer />
             <NavBar />
             <Dashboardbanner />

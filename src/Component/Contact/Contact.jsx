@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import Footer from "../Footer/Footer";
 import NavBar from "../Navbar/NavBar";
 
 const Contact = () => {
     return (
         <div>
+             <Helmet>
+                <title>Gadget Haven | Contacts</title>
+            </Helmet>
             <NavBar></NavBar>
             <div className="text-center border-8 rounded-xl border-pink-100 flex flex-col justify-center  p-10  bg-purple-600 w-[80%] text-white mx-auto mt-14">
                 <div>
