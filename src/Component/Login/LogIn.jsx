@@ -2,23 +2,55 @@ import { Helmet } from "react-helmet-async";
 import Footer from "../Footer/Footer";
 import NavBar from "../Navbar/NavBar";
 import { FaGoogle } from "react-icons/fa";
-import { GoogleAuthProvider,signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../firebase.init";
+import { useEffect, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const LogIn = () => {
+    const [user, setuser] = useState(null)
+    console.log(user);
     const provider = new GoogleAuthProvider();
 
 
     const handleLogIn = () => {
-        signInWithPopup(auth,provider)
-        .then(result=>console.log(result))
-        .catch(err=>console.log("Erroe :",err))
-
+        signInWithPopup(auth, provider)
+            .then(result => {
+                console.log(result.user)
+                setuser(result.user)
+            })
+            .catch(err => {
+                console.log("Erroe :", err)
+                setuser(null)
+            })
     }
+
+    // console.log(user.user);
+    useEffect(() => {
+        if (user) {
+            toast.success(<div>
+                <h3 style={{ color: "green" }}>Login Successful!</h3>
+                <div className="flex gap-2 items-center">
+                <span><img className="w-7 rounded-full" src={user.photoURL} alt="" /></span>
+                <p>Welcome, <strong>{user.displayName}</strong></p>
+                
+                </div>
+
+
+            </div>
+                , {
+                    position: 'top-center'
+                }
+            )
+            console.log("From Toast");
+        }
+    }, [user])
 
     return (
         <div>
+            <ToastContainer />
             <Helmet>
                 <title>Gadget Haven | Login</title>
             </Helmet>

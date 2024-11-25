@@ -24,8 +24,8 @@ const NavBar = () => {
                     <NavLink to={"/statistics"} className="hidden md:inline">Statistic</NavLink>
                     <NavLink to={'/dashboard'}>Dashboard</NavLink>
                     <NavLink to={'/contact'}>Contact</NavLink>
-                    <NavLink to={'/LogIn'} >
-                        Log In
+                    <NavLink to={'/logIn'} >
+                        LogIn
                     </NavLink>
                 </div>
                 <div className="flex gap-3">
