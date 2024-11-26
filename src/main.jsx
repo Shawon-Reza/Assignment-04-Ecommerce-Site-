@@ -19,6 +19,7 @@ import Wishlist from './Component/WishList/Wishlist.jsx';
 import RoutingError from './Component/handleRoutingErrorPage/RoutingError.jsx';
 import Contact from './Component/Contact/Contact.jsx';
 import LogIn from './Component/Login/LogIn.jsx';
+import SignUp from './Component/SignUp/SignUp.jsx';
 
 const router = createBrowserRouter([
   {
@@ -93,6 +94,10 @@ const router = createBrowserRouter([
       {
         path:'logout',
         element: <LogIn></LogIn>
+      },
+      {
+        path:'SignUp',
+        element: <SignUp></SignUp>
       }
     ],
   },

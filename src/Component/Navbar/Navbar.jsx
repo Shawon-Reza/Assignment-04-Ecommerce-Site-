@@ -12,7 +12,7 @@ const NavBar = () => {
     //  flex justify-between items-center w-full bg-[#9538E2] py-5 text-white px-12 rounded-t-xl
 
     const { user, setuser } = useContext(AllProducts)
-    console.log(user);
+    // console.log(user);
     return (
         <div>
             <nav
@@ -56,7 +56,7 @@ const NavBar = () => {
                     {
                         user ?
                             (<img
-                                className="w-6"
+                                className="w-6 rounded-full"
                                 src={user.photoURL} alt="" />)
                             :
                             (<p></p>)
