@@ -3,20 +3,27 @@ import Footer from "../Footer/Footer";
 import NavBar from "../Navbar/NavBar";
 import { FaGoogle } from "react-icons/fa";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { GithubAuthProvider } from "firebase/auth";
 import { auth } from "../../firebase.init";
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaGithub } from "react-icons/fa6";
+import { AllProducts } from "../Root/Root";
 
 
 const LogIn = () => {
-    const [user, setuser] = useState(null)
+
+  const {user , setuser} = useContext(AllProducts)
+
+    // Sigin User info
     console.log(user);
-    const provider = new GoogleAuthProvider();
+    const Googleprovider = new GoogleAuthProvider();
+    const Githubprovider = new GithubAuthProvider();
 
-
+// Google Sign In
     const handleLogIn = () => {
-        signInWithPopup(auth, provider)
+        signInWithPopup(auth, Googleprovider)
             .then(result => {
                 console.log(result.user)
                 setuser(result.user)
@@ -27,7 +34,7 @@ const LogIn = () => {
             })
     }
 
-    // console.log(user.user);
+//  login Succes Confirmation popup
     useEffect(() => {
         if (user) {
             toast.success(<div>
@@ -48,6 +55,19 @@ const LogIn = () => {
         }
     }, [user])
 
+
+// Github Loging
+    const handleGithub =()=>{
+        signInWithPopup (auth , Githubprovider)
+        .then (result=>{
+            console.log(result);
+            setuser(result.user)
+        })
+        .catch(err=>{console.log("Error :",err)})
+
+        
+    }
+
     return (
         <div>
             <ToastContainer />
@@ -61,15 +81,31 @@ const LogIn = () => {
                     <p className="text-4xl font-bold">WelCome!</p>
                     <p className="text-3xl font-bold text-yellow-400">Sign in to Gadget Heaven</p>
 
-                    <button className=" mt-3 p-3 bg-purple-400 rounded-full font-bold text-yellow-200 shadow-2xl"
+                   <div className="flex flex-col">
+ 
+
+
+                   <button className=" mt-3 p-3 bg-purple-400 rounded-full font-bold text-yellow-200 shadow-2xl"
                         onClick={handleLogIn}
                     >
                         <div className="flex items-center justify-center gap-5">
-                            <span>Sign in with google</span>
-                            <span className="p-1 bg-white text-red-600 rounded-full"><FaGoogle cl />
+                            <span>Sign in with Google</span>
+                            <span className="p-1 bg-white text-red-600 rounded-full"><FaGoogle  />
                             </span>
                         </div>
                     </button>
+
+                    <button className=" mt-3 p-3 bg-purple-400 rounded-full font-bold text-yellow-200 shadow-2xl"
+                        onClick={handleGithub}
+                    >
+                        <div className="flex items-center justify-center gap-5">
+                            <span>Sign in with Github</span>
+                            <span className="p-1 bg-white text-red-600 rounded-full"><FaGithub />
+                            </span>
+                        </div>
+                    </button>
+                   </div>
+                    
                     <p className="opacity-75 my-3">Thanks to visit us!</p>
                 </div>
 

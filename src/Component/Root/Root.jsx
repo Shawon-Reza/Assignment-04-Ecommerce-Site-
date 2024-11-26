@@ -8,6 +8,7 @@ const Root = () => {
     const [allAddtoCart, setAllAddtoCart] = useState([])
     const [allAddToWishlist, setallAddToWishlist] = useState([])
     const [Allproducs, setAllProducts] = useState([''])
+    const [user, setuser] = useState(null)
 
 
     useEffect(() => {
@@ -26,7 +27,12 @@ const Root = () => {
 
             {/* <p>From Root.......................</p> */}
             <AllProducts.Provider
-                value={{ Allproducs, setAllProducts, allAddtoCart, setAllAddtoCart, allAddToWishlist, setallAddToWishlist }}>
+                value={{
+                    Allproducs, setAllProducts,
+                    allAddtoCart, setAllAddtoCart,
+                    allAddToWishlist, setallAddToWishlist,
+                    user, setuser
+                }}>
 
                 <Outlet></Outlet>
             </AllProducts.Provider>
